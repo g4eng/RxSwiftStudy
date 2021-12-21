@@ -19,6 +19,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
     }
 
+    // just는 넣는 것 그대로 나온다
     @IBAction func exJust1() {
         Observable.just("Hello World")
             .subscribe(onNext: { str in
@@ -35,6 +36,7 @@ class ViewController: UITableViewController {
             .disposed(by: disposeBag)
     }
 
+    // from 은 배열넣어주면 순서대로 돌려준다
     @IBAction func exFrom1() {
         Observable.from(["RxSwift", "In", "4", "Hours"])
             .subscribe(onNext: { str in
@@ -44,6 +46,7 @@ class ViewController: UITableViewController {
     }
 
     @IBAction func exMap1() {
+        // map이 이싿면 위에 있는걸 받아서 map에서 수정해서 내려줌(mapping)
         Observable.just("Hello")
             .map { str in "\(str) RxSwift" }
             .subscribe(onNext: { str in
@@ -52,6 +55,7 @@ class ViewController: UITableViewController {
             .disposed(by: disposeBag)
     }
 
+    // stream
     @IBAction func exMap2() {
         Observable.from(["with", "곰튀김"])
             .map { $0.count }
