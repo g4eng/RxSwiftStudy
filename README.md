@@ -1,4 +1,4 @@
-# RxSwift * Reactive Programming with Swift
+# RxSwift - Reactive Programming with Swift
 ## Section I: Getting Started with RxSwift
 ### Chapter 1: Hello, RxSwift!
 #### Ⅰ. What is RxSwift?
